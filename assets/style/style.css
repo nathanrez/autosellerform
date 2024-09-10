@@ -1,0 +1,112 @@
+body {
+    font-family: 'Nunito', sans-serif; /* Define a fonte usada em todo o documento */
+    display: flex; /* Aplica flexbox para alinhar os itens */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100vh; /* Define a altura como 100% da altura da viewport */
+    margin: 0; /* Remove a margem padrão do body */
+}
+
+.form-container {
+    background-color: #f4f4f4; /* Define a cor de fundo do formulário */
+    box-shadow: 0px 0px 20px 0px #0e2a34; /* Adiciona uma sombra ao redor do contêiner */
+    display: flex; /* Aplica flexbox para alinhar o conteúdo */
+    padding-top: 10px; /* Adiciona espaçamento superior dentro do contêiner */
+    justify-content: center; /* Centraliza o conteúdo dentro do contêiner */
+    height: auto; /* Deixa a altura se ajustar automaticamente */
+    width: 100%; /* Define a largura como 100% */
+    max-width: 610px; /* Define uma largura máxima de 610px */
+    border-radius: 20px; /* Define bordas arredondadas de 20px */
+    margin: 20px; /* Adiciona uma margem ao redor do contêiner */
+}
+
+.info-steps {
+    display: flex; /* Usa flexbox para organizar os itens */
+    flex-direction: row; /* Define a organização dos itens em linha horizontal */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Adiciona um espaçamento de 20px entre os itens */
+    margin-top: 30px; /* Adiciona uma margem superior de 30px */
+}
+
+.step1, .step2, .step3 {
+    font-size: 15px; /* Define o tamanho da fonte */
+    border: 1px solid #0e2a34; /* Adiciona uma borda de 1px de cor #0e2a34 */
+    width: 170px; /* Define a largura de cada item */
+    display: flex; /* Usa flexbox para alinhar o conteúdo dentro do item */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Centraliza o conteúdo dentro do item */
+    height: 40px; /* Define a altura de cada item */
+    border-radius: 10px; /* Define bordas arredondadas de 10px */
+    color: #0e2a34; /* Define a cor do texto */
+    font-family: 'Nunito', sans-serif; /* Define a fonte para os itens */
+}
+
+.info-steps > .step2, .info-steps > .step3 {
+    border-color: #ccc; /* Altera a cor da borda para cinza claro */
+    color: #ccc; /* Altera a cor do texto para cinza claro */
+    background-color: transparent; /* Remove a cor de fundo */
+}
+
+.info-steps2 > .step1, .info-steps3 > .step1, .info-steps3 > .step2 {
+    color: #f3f3f3; /* Define a cor do texto como branco */
+    border: none; /* Remove a borda */
+    background-color: #0e2a34; /* Define a cor de fundo para #0e2a34 */
+}
+
+.info-steps3 > .step3 {
+    border-color: #0e2a34; /* Define a borda sólida de 1px com a cor #0e2a34 */
+    color: #0e2a34; /* Define a cor do texto como #0e2a34 */
+}
+
+.input-data {
+    display: flex; /* Usa flexbox para organizar os itens */
+    flex-direction: column; /* Coloca a label acima do input */
+    padding-top: 20px; /* Adiciona um espaçamento superior de 20px */
+    gap: 5px; /* Adiciona um espaçamento de 5px entre a label e o input */
+    border-radius: 10px; /* Define bordas arredondadas de 10px */
+    width: 550px; /* Define a largura dos campos de input */
+    font-size: 15px; /* Define o tamanho da fonte nos inputs */
+}
+
+.checkbox-container {
+    display: flex; /* Usa flexbox para organizar os itens em linha */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    gap: 5px; /* Adiciona um espaçamento de 5px entre o checkbox e o texto */
+    margin-top: 10px; /* Adiciona uma margem superior de 10px */
+}
+
+.next {
+    width: 100px; /* Define a largura do botão */
+    height: 40px; /* Define a altura do botão */
+    border-radius: 10px; /* Define bordas arredondadas de 10px */
+    border: none; /* Remove a borda padrão do botão */
+    background-color: #0e2a34; /* Define a cor de fundo do botão */
+    color: #f3f3f3; /* Define a cor do texto como branco */
+    font-size: 15px; /* Define o tamanho da fonte do botão */
+    cursor: pointer; /* Muda o cursor para uma mãozinha quando o mouse passa sobre o botão */
+    transition: .2s; /* Adiciona uma transição suave para mudanças de estado */
+}
+
+.next:hover {
+    background-color: #0e2a34; /* Mantém a cor de fundo no estado de hover */
+}
+
+.logo {
+    padding: 20px 0; /* Adiciona espaçamento superior e inferior de 20px */
+    display: flex; /* Usa flexbox para organizar o conteúdo */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    justify-content: end; /* Alinha os itens à direita */
+    gap: 350px; /* Define um espaçamento de 350px entre os itens */
+}
+
+@media (max-width: 768px) {
+    .step1, .step2, .step3 {
+        font-size: 11px; /* Define o tamanho da fonte para dispositivos menores */
+        width: 150px; /* Reduz a largura dos passos */
+    }
+
+    .next {
+        font-size: 12px; /* Reduz o tamanho da fonte do botão em dispositivos menores */
+    }
+}
