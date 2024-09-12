@@ -1,31 +1,55 @@
 let currentStep = 1;
 
 function nextStep() {
-  if (currentStep === 1 && validateStep1()) {
-    document.getElementById('step-1').style.display = 'none';
+  if (currentStep < 3) {
+    if (currentStep === 1 && !validateStep1()) {
+      alert('Preencha todos os campos do passo 1.');
+      return;
+    } else if (currentStep === 2 && !validateStep2()) {
+      alert('Preencha todos os campos do passo 2.');
+      return;
+    }
+
+    // Esconder o step atual
+    document.getElementById(`step-${currentStep}`).style.display = 'none';
+
+    // Mostrar o próximo step
     currentStep++;
-    document.getElementById('step-2').style.display = 'block';
-  } else if (currentStep === 2 && validateStep2()) {
-    document.getElementById('step-2').style.display = 'none';
-    currentStep++;
-    document.getElementById('step-3').style.display = 'block';
-    displayConfirmation();
+    document.getElementById(`step-${currentStep}`).style.display = 'block';
+
+    // Atualizar o passo ativo
+    updateStepIndicator();
   }
 }
 
 function prevStep() {
   if (currentStep > 1) {
-    if (currentStep === 2) {
-      document.getElementById('step-2').style.display = 'none';
-      currentStep--;
-      document.getElementById('step-1').style.display = 'block';
-    } else if (currentStep === 3) {
-      document.getElementById('step-3').style.display = 'none';
-      currentStep--;
-      document.getElementById('step-2').style.display = 'block';
-    }
+    // Esconder o step atual
+    document.getElementById(`step-${currentStep}`).style.display = 'none';
+
+    // Mostrar o step anterior
+    currentStep--;
+    document.getElementById(`step-${currentStep}`).style.display = 'block';
+
+    // Atualizar o passo ativo
+    updateStepIndicator();
   }
 }
+
+function updateStepIndicator() {
+  // Remover a classe 'active' de todos os passos
+  const steps = document.querySelectorAll('.step');
+  steps.forEach((step, index) => {
+    // Comparar com o valor de currentStep - 1 porque o array começa em 0
+    if (index === currentStep - 1) {
+      step.classList.add('active');
+    } else {
+      step.classList.remove('active');
+    }
+  });
+}
+
+updateStepIndicator();
 
 function validateStep1() {
   const nome = document.getElementById('nome').value;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="/index.js"></script>
+    <script src="assets/script/script.js"></script>
     <link rel="stylesheet" href="assets/style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 
@@ -16,10 +16,10 @@
         <div class="form-container" id="form-container">
             <form id="steps-form">
                 <div class="step-1" id="step-1">
-                    <div class="info-steps"> <!--Rever aqui-->
-                        <div class="step1">Dados Pessoais</div>
-                        <div class="step2">Informações do Veículo</div>
-                        <div class="step3">Fotos e Descrição</div>
+                    <div class="info-steps">
+                        <div class="step step1">Dados Pessoais</div>
+                        <div class="step step2">Informações do Veículo</div>
+                        <div class="step step3">Fotos e Descrição</div>
                     </div>
 
                     <div class="input-data">
@@ -53,76 +53,93 @@
                 </div>
 
                 <div id="step-2" style="display: none;">
-                    <div class="info-step-2">
-                        <p class="p-1">Dados Pessoais</p>
-                        <p class="p-2">Informações do Veículo</p>
-                        <p class="p-3">Fotos e Descrição</p>
+                    <div class="info-steps">
+                        <div class="step step1">Dados Pessoais</div>
+                        <div class="step step2">Informações do Veículo</div>
+                        <div class="step step3">Fotos e Descrição</div>
                     </div>
-
+                
                     <div class="input-data2">
                         <label for="marca">Marca</label>
-                        <select id="marca" name="marca">
+                        <select class="input-data2" id="marca" name="marca">
+                            <option> </option>
                             <option value="Chevrolet - GM">Chevrolet - GM</option>
                             <option value="Volkswagen">Volkswagen</option>
                             <option value="BMW">BMW</option>
                             <option value="Nissan">Nissan</option>
                         </select>
                     </div>
-
+                    
                     <div class="input-data2">
                         <label for="modelo">Modelo</label>
-                        <select id="modelo" name="modelo">
+                        <select class="input-data2" id="modelo" name="modelo">
+                            <option> </option>
                             <option value="Astra">Astra</option>
                             <option value="Onix">Onix</option>
                             <option value="Celta">Celta</option>
                             <option value="S10">S10</option>
                         </select>
                     </div>
-
+                
                     <div class="input-data2">
                         <label for="carroceria">Carroceria</label>
-                        <select id="carroceria" name="carroceria">
+                        <select class="input-data2" id="carroceria" name="carroceria">
+                            <option> </option>
                             <option value="hatchback">Hatchback</option>
                             <option value="sedan">Sedã</option>
                             <option value="suv">SUV</option>
                             <option value="pickup">Pick-up</option>
                         </select>
                     </div>
-
+                
                     <div class="input-data2">
                         <label for="cambio">Câmbio</label>
-                        <select id="cambio" name="cambio">
+                        <select class="input-data2" id="cambio" name="cambio">
+                            <option> </option>
                             <option value="automatico">Automatico</option>
                             <option value="manual">Manual</option>
                         </select>
                     </div>
-
+                
                     <div class="input-data2">
                         <label for="ano">Ano</label>
-                        <select id="ano" name="ano">
-                        <input type="number" id="ano" name="ano" required>
-                        </select>
+                        <input class="input-data2" type="number" id="ano" name="ano" required>
                     </div>
-
-                    <div class="input-data2"></div>
+                
+                    <div class="input-data2">
                         <label for="km">Quilometragem</label>
-                        <input type="number" id="km" name="km" required>
+                        <input class="input-data2" type="number" id="km" name="km" required>
                     </div>
                     
-                    <div class="input-data2"></div>
+                    <div class="input-data2">
                         <label for="placa">Final placa</label>
-                        <input type="number" id="placa" name="placa" required>
+                        <input class="input-data2" type="number" id="placa" name="placa" required>
                     </div>
+                
+                    <div class="logo2">
+                        <div>
+                            <button type="button" class="back" onclick="prevStep()">Voltar</button>
+                            <button type="button" class="next" onclick="nextStep()">Próximo</button>
+                        </div>
 
-                    <button type="button" class="back" onclick="prevStep()">Voltar</button>
-                    <button type="button" class="next" onclick="nextStep()">Próximo</button>
+                        <img src="assets/images/logo.png" alt="CarSaller" height="110px">
+                    </div>
                 </div>
 
                 <div id="step3" style="display: none;">
-                    <div class="info-step-3">
-                        <p class="p-1">Dados Pessoais</p>
-                        <p class="p-2">Informações do Veículo</p>
-                        <p class="p-3">Fotos e Descrição</p>
+                    <div class="info-steps">
+                        <div class="step step1">Dados Pessoais</div>
+                        <div class="step step2">Informações do Veículo</div>
+                        <div class="step step3">Fotos e Descrição</div>
+                    </div>
+
+                    <div class="logo2"></div>
+                        <div>
+                            <button type="button" class="back" onclick="prevStep()">Voltar</button>
+                            <button type="button" class="next" onclick="nextStep()">Próximo</button>
+                        </div>
+
+                        <img src="assets/images/logo.png" alt="CarSaller" height="110px">
                     </div>
                 </div>    
                 

@@ -29,6 +29,25 @@ body {
     margin-top: 30px; /* Adiciona uma margem superior de 30px */
 }
 
+.step {
+    font-size: 15px;
+    border: 1px solid #0e2a34;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 10px;
+    color: #ccc; /* Cor padrão para passos não ativos */
+    background-color: transparent; /* Cor de fundo padrão */
+}
+
+.step.active {
+    color: #f3f3f3; /* Cor do texto quando o passo está ativo */
+    background-color: #0e2a34; /* Cor de fundo do passo ativo */
+    border: none; /* Remove a borda para o passo ativo */
+}
+
 .step1, .step2, .step3 {
     font-size: 15px; /* Define o tamanho da fonte */
     border: 1px solid #0e2a34; /* Adiciona uma borda de 1px de cor #0e2a34 */
@@ -66,7 +85,7 @@ body {
     gap: 5px; /* Adiciona um espaçamento de 5px entre a label e o input */
     border-radius: 10px; /* Define bordas arredondadas de 10px */
     width: 550px; /* Define a largura dos campos de input */
-    font-size: 15px; /* Define o tamanho da fonte nos inputs */
+    font-size: 17px; /* Define o tamanho da fonte nos inputs */
 }
 
 .checkbox-container {
@@ -88,6 +107,18 @@ body {
     transition: .2s; /* Adiciona uma transição suave para mudanças de estado */
 }
 
+.back{
+    width: 60px; /* Define a largura do botão */
+    height: 40px; /* Define a altura do botão */
+    border-radius: 10px; /* Define bordas arredondadas de 10px */
+    border: none; /* Remove a borda padrão do botão */
+    background-color: #a00000; /* Define a cor de fundo do botão */
+    color: #f3f3f3; /* Define a cor do texto como branco */
+    font-size: 15px; /* Define o tamanho da fonte do botão */
+    cursor: pointer; /* Muda o cursor para uma mãozinha quando o mouse passa sobre o botão */
+    transition: .2s; /* Adiciona uma transição suave para mudanças de estado */
+}
+
 .next:hover {
     background-color: #0e2a34; /* Mantém a cor de fundo no estado de hover */
 }
@@ -100,13 +131,20 @@ body {
     gap: 350px; /* Define um espaçamento de 350px entre os itens */
 }
 
-@media (max-width: 768px) {
-    .step1, .step2, .step3 {
-        font-size: 11px; /* Define o tamanho da fonte para dispositivos menores */
-        width: 150px; /* Reduz a largura dos passos */
-    }
+.input-data2 {
+    display: flex; /* Usa flexbox para organizar os itens */
+    flex-direction: column; /* Coloca a label acima do input */
+    padding-top: 20px; /* Adiciona um espaçamento superior de 20px */
+    gap: 5px; /* Adiciona um espaçamento de 5px entre a label e o input */
+    border-radius: 10px; /* Define bordas arredondadas de 10px */
+    width: 550px; /* Define a largura dos campos de input */
+    font-size: 15px; /* Define o tamanho da fonte nos inputs */
+}
 
-    .next {
-        font-size: 12px; /* Reduz o tamanho da fonte do botão em dispositivos menores */
-    }
+.logo2 {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 50%;
 }
