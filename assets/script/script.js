@@ -30,15 +30,38 @@ function prevStep() {
 function validateStep1() {
   const nome = document.getElementById('nome').value;
   const email = document.getElementById('email').value;
+  const fone = document.getElementById('fone').value;
+  const cpf = document.getElementById('cpf').value;
 
-  return nome && email;
+  return nome, email, fone, cpf;
 }
 
 function validateStep2() {
-  const telefone = document.getElementById('telefone').value;
-  const endereco = document.getElementById('endereco').value;
+  const marca = document.getElementById('marca').value;
+  const modelo = document.getElementById('modelo').value;
+  const carroceria = document.getElementById('carroceria').value;
+  const cambio = document.getElementById('cambio').value;
+  const ano = document.getElementById('ano').value;
+  const km = document.getElementById('km').value;
+  const placa = document.getElementById('placa').value;
 
-  return telefone && endereco;
+  return marca, modelo, carroceria, cambio, ano, km, placa;
+
+  var files = document.querySelector('input[name="files"]');
+
+  files.addEventListener("change", function(file){
+	var input = file.target;
+	
+	var reader = new FileReader();
+    
+	reader.onload = function(){
+      var dataURL = reader.result;
+      var output = document.getElementById('output');
+      output.src = dataURL;
+    };
+
+    reader.readAsDataURL(input.files[0]);
+});
 }
 
 function displayConfirmation() {

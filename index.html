@@ -67,7 +67,7 @@
                             <div class="s3">Fotos e Descrição</div>
                         </div>
 
-                        <div class="input-container">
+                        <div class="input-container-2">
                             <label for="marca">Marca</label>
                             <select id="marca" name="marca">
                                 <option> </option>
@@ -78,7 +78,7 @@
                             </select>
                         </div>
 
-                        <div class="input-container">
+                        <div class="input-container-2">
                             <label for="modelo">Modelo</label>
                             <select id="modelo" name="modelo">
                                 <option> </option>
@@ -89,7 +89,7 @@
                             </select>
                         </div>
                         
-                        <div class="input-container">
+                        <div class="input-container-2">
                             <label for="carroceria">Carroceria</label>
                             <select id="carroceria" name="carroceria">
                                 <option> </option>
@@ -100,7 +100,7 @@
                             </select>
                         </div> 
 
-                        <div class="input-container">
+                        <div class="input-container-2">
                             <label for="cambio">Câmbio</label>
                             <select id="cambio" name="cambio">
                                 <option> </option>
@@ -109,20 +109,38 @@
                             </select>
                         </div>
                         
-                        <div class="input-container">
+                        <div class="input-container-2">
                             <label for="ano">Ano</label>
                             <input type="number" id="ano" name="ano" required>
                         </div>
                     
-                        <div class="input-container">
+                        <div class="input-container-2">
                             <label for="km">Quilometragem</label>
                             <input type="number" id="km" name="km" required>
                         </div>
                         
-                        <div class="input-container">
-                            <label for="placa">Final placa</label>
-                            <input type="number" id="placa" name="placa" required>
+                        <div class="input-desc">
+                            <label for="desc">Descrição do Anuncio</label>
+                            <textarea id="desc" maxlength="1000" rows="1000"></textarea>
                         </div>
+
+                        <div class="input-photo">
+                           <!--<input type="file" name="files">--> 
+
+                           <button class="button-photo">Adicionar Fotos</button>
+
+                            <div id="view_photo">
+                                <img id='output' style="height:50px; width:50px">
+                                <img id='output' style="height:50px; width:50px">
+                                <img id='output' style="height:50px; width:50px">
+                                <img id='output' style="height:50px; width:50px">
+                                <img id='output' style="height:50px; width:50px">
+                                <img id='output' style="height:50px; width:50px">
+                            </div>
+                        </div>
+
+
+                        
 
                         <div class="footer">
                             <div>
