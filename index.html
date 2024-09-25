@@ -38,7 +38,7 @@
 
                     <div class="input-container">
                         <label for="fone">Telefone</label>
-                        <input type="fone" id="fone" name="fone" required>
+                        <input type="number" id="fone" name="fone" placeholder="(XX) XXXXX-XXXXX" required>
 
                         <div class="checkbox-container">
                             <input type="checkbox" id="whatsapp" name="whatsapp">
@@ -48,14 +48,14 @@
 
                     <div class="input-container">
                         <label for="cpf">CPF</label>
-                        <input type="text" id="cpf" name="cpf" required>
+                        <input type="number" id="cpf" name="cpf" placeholder="XXX.XXX.XXX/XX" required>
                     </div>
 
                     <div class="footer">
                         <div class="button">
                             <button class="next" type="button" class="next" onclick="nextStep()">Próximo</button>
                         </div>
-                        <img src="assets/images/logo.png" alt="CarSaller" height="110px">
+                        <img class="logo" src="assets/images/logo.png" alt="CarSaller" height="110px">
                     </div>
                 </div>
 
@@ -69,23 +69,27 @@
 
                         <div class="input-container-2">
                             <label for="marca">Marca</label>
-                            <select id="marca" name="marca">
+
+                            <select id="marca" name="marca" onchange="showModels()">
                                 <option> </option>
-                                <option value="Chevrolet - GM">Chevrolet - GM</option>
-                                <option value="Volkswagen">Volkswagen</option>
-                                <option value="BMW">BMW</option>
-                                <option value="Nissan">Nissan</option>
+                                <option value="audi">Audi</option>
+                                <option value="bmw">BMW</option>
+                                <option value="chevrolet">Chevrolet - GM</option>
+                                <option value="fiat">FIAT</option>
+                                <option value="ford">FORD</option>
+                                <option value="honda">Honda</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="nissan">Nissan</option>
+                                <option value="toyota">Toyota</option>
+                                <option value="volkswagen">Volkswagen</option>
                             </select>
                         </div>
 
                         <div class="input-container-2">
-                            <label for="modelo">Modelo</label>
+                            <label for="modelo">Modelo:</label>
+
                             <select id="modelo" name="modelo">
-                                <option> </option>
-                                <option value="Astra">Astra</option>
-                                <option value="Onix">Onix</option>
-                                <option value="Celta">Celta</option>
-                                <option value="S10">S10</option>
+                                <option value=""></option>
                             </select>
                         </div>
                         
@@ -139,18 +143,34 @@
                             </div>
                         </div>
 
-
-                        
-
                         <div class="footer">
                             <div>
                                 <button class="back" type="button" class="back" onclick="prevStep()">Voltar</button>
                                 <button class="next" type="button" class="next" onclick="nextStep()">Próximo</button>
                             </div>
     
-                            <img src="assets/images/logo.png" alt="CarSaller" height="110px">
+                            <img class="logo" src="assets/images/logo.png" alt="CarSaller" height="110px">
                         </div>    
                     </div>
+
+                    <div id="step3" style="display: none;">
+                    <div class="info-step-3">
+                        <div class="s1">Dados Pessoais</div>
+                        <div class="s2">Informações do Veículo</div>
+                        <div class="s3">Fotos e Descrição</div>
+                    </div>
+
+                    <div class="input-container-2" id="confirmation"></div>
+
+                    <div class="footer">
+                        <div>
+                            <button class="back" type="button" class="back" onclick="prevStep()">Voltar</button>
+                            <button type="submit" class="next" onclick="submitForm()">Enviar</button>
+                        </div>
+
+                        <img src="assets/images/logo.png" alt="CarSaller" height="110px">
+                    </div>   
+                </div>
             </form>
         </div>
     </main>
