@@ -72,7 +72,7 @@ function validateStep2() {
   const carroceria = document.getElementById('carroceria').value;
   const cambio = document.getElementById('cambio').value;
   const ano = document.getElementById('ano').value;
-  const km = document.getElementById('km').value;
+  const quilometragem = document.getElementById('quilometragem').value;
 
   // Parte do upload de arquivos
   var files = document.querySelector('input[name="files"]');
@@ -95,7 +95,7 @@ function validateStep2() {
   }
 
   // Retorna os valores do formulário
-  return {marca, modelo, carroceria, cambio, ano, km};
+  return {marca, modelo, carroceria, cambio, ano, quilometragem};
 }
 
 function displayConfirmation() {
@@ -108,7 +108,7 @@ function displayConfirmation() {
   const carroceria = document.getElementById('carroceria').value;
   const cambio = document.getElementById('cambio').value;
   const ano = document.getElementById('ano').value;
-  const km = document.getElementById('km').value;
+  const quilometragem = document.getElementById('quilometragem').value;
 
   const confirmationHTML = `
     <p><strong>Nome:</strong> ${nome}</p>
@@ -120,7 +120,7 @@ function displayConfirmation() {
     <p><strong>Carroceria:</strong> ${carroceria}</p>
     <p><strong>Cambio:</strong> ${cambio}</p>
     <p><strong>Ano:</strong> ${ano}</p>
-    <p><strong>Quilometragem:</strong> ${km}</p>
+    <p><strong>Quilometragem:</strong> ${quilometragem}</p>
   `;
 
   document.getElementById('confirmation').innerHTML = confirmationHTML;

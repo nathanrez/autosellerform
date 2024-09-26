@@ -252,6 +252,7 @@ input[type=file] {
 
     textarea {
         width: 92%;
+        font-size: 14px;
     }
 }
 
@@ -276,7 +277,78 @@ input[type=file] {
         font-size: 14px;
     }
 
+    #km {
+        visibility: hidden;
+        position: relative;
+    }
+
+    #km::after {
+        content: "Km";
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
     textarea {
         width: 92%;
+        font-size: 14px;
     }
+}
+
+@media screen and (max-width: 360px) {
+    .form-container {
+        max-width: 300px;
+    }
+
+    .info-step-1, .info-step-2, .info-step-3 {
+        gap: 5px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .s1, .s2, .s3 {
+        font-size: 14px;
+        width: 70px;
+        height: 45px;
+    }
+
+    .s2 {
+        visibility: hidden;
+        position: relative;
+    }
+
+    .s2::after {
+        content: "Info. Veículo";
+        visibility: visible;
+        position: absolute;
+        border: 1px solid #ccc ;
+        color: #ccc;
+        border-radius: 10px;
+        width: 70px;
+        height: 45px;
+    }
+
+     .input-container-2 {
+        font-size: 14px;
+    }
+
+    #km {
+        visibility: hidden;
+        position: relative;
+    }
+
+    #km::after {
+        content: "Km";
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    textarea {
+        width: 92%;
+        font-size: 14px;
+    }
+
 }
