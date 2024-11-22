@@ -137,6 +137,10 @@ input, select {
     color: #f4f4f4;
 }
 
+#submitForm {
+    display: none;
+}
+
 .input-container-2 {
     align-items: center;
     display: inline-block;
@@ -351,4 +355,7 @@ input[type=file] {
         font-size: 14px;
     }
 
+}
+#formulario {
+    /* display: none; */
 }

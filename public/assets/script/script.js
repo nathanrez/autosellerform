@@ -1,3 +1,5 @@
+const form = document.querySelectorAll('#steps-form input')
+
 let currentStep = 1;
 
 function nextStep() {
@@ -58,21 +60,11 @@ function showModels() {
 }
 
 function validateStep1() {
-  const nome = document.getElementById('nome').value;
-  const email = document.getElementById('email').value;
-  const fone = document.getElementById('fone').value;
-  const cpf = document.getElementById('cpf').value;
 
   return {nome, email, fone, cpf};
 }
 
 function validateStep2() {
-  const marca = document.getElementById('marca').value;
-  const modelo = document.getElementById('modelo').value;
-  const carroceria = document.getElementById('carroceria').value;
-  const cambio = document.getElementById('cambio').value;
-  const ano = document.getElementById('ano').value;
-  const quilometragem = document.getElementById('quilometragem').value;
 
   // Parte do upload de arquivos
   var files = document.querySelector('input[name="files"]');
@@ -99,16 +91,16 @@ function validateStep2() {
 }
 
 function displayConfirmation() {
-  const nome = document.getElementById('nome').value;
-  const email = document.getElementById('email').value;
-  const fone = document.getElementById('fone').value;
-  const cpf = document.getElementById('cpf').value;
-  const marca = document.getElementById('marca').value;
-  const modelo = document.getElementById('modelo').value;
-  const carroceria = document.getElementById('carroceria').value;
-  const cambio = document.getElementById('cambio').value;
-  const ano = document.getElementById('ano').value;
-  const quilometragem = document.getElementById('quilometragem').value;
+  let nome = document.getElementById('nome').value;
+  let email = document.getElementById('email').value;
+  let fone = document.getElementById('fone').value;
+  let cpf = document.getElementById('cpf').value;
+  let marca = document.getElementById('marca').value;
+  let modelo = document.getElementById('modelo').value;
+  let carroceria = document.getElementById('carroceria').value;
+  let cambio = document.getElementById('cambio').value;
+  let ano = document.getElementById('ano').value;
+  let quilometragem = document.getElementById('quilometragem').value; 
 
   const confirmationHTML = `
     <p><strong>Nome:</strong> ${nome}</p>
@@ -126,8 +118,36 @@ function displayConfirmation() {
   document.getElementById('confirmation').innerHTML = confirmationHTML;
 }
 
-function submitForm() {
-  document.getElementById('multi-step-form').reset();
-  document.getElementById('form-container').style.display = 'none';
-  document.getElementById('success-message').style.display = 'block';
+async function submitForm() { 
+  const data = {
+    vendedor : {
+      'nome' : nome.value,
+      'email' : email.value,
+      'fone' : fone.value,
+      'cpf' : cpf.value
+    },
+    carro : {
+    'marca' : marca.value,
+    'modelo': modelo.value,
+    'carroceria' : carroceria.value,
+    'cambio' : cambio.value,
+    'ano' : ano.value,
+    'km' : quilometragem.value
+    }
+  };
+
+  const response = await fetch('/carros', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+  const result = await response.json();
+    // console.log("Success:", result.mensagem_back);
+  console.log(result.mensagem_back);
+
 }
+
+
+
