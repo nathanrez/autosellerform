@@ -1,0 +1,363 @@
+*, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #3A6D8C;
+}
+
+.form-container {
+    box-shadow: 6px 6px 14px 0px #001F3F;
+    padding-top: 15px; 
+    width: 100%;
+    max-width: 610px;
+    box-sizing: border-box;
+    border: 2px solid #f4f4f4;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.info-step-1, .info-step-2, .info-step-3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+#invForm {
+    display: none;
+}
+.s1, .s2, .s3 {
+    font-size: 17px;
+    text-align: center;
+    border: 1px solid  #0e2a34;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    border-radius: 10px;
+    color:  #0e2a34;
+}
+
+.info-step-1 > .s2, .s3 {
+    border: 1px solid #ccc;
+    color: #ccc;
+    background-color: transparent;
+}
+
+.info-step-2 > .s1 {
+    color: #f3f3f3;
+    border: none;
+    background-color: #0e2a34;
+}
+
+.info-step-2 > .s2 {
+    border: 1px solid #0e2a34;
+    color: #0e2a34;
+    background-color: transparent;
+}
+
+.info-step-3 > .s1, .s2 {
+    background-color: #0e2a34;
+    color: #f3f3f3;
+    border: none;
+}
+
+.info-step-3 > .s3 {
+    border: 1px solid #0e2a34;
+    color: #0e2a34;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 23px;
+    width: 90%;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+input, select {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #0e2a34;
+    border-radius: 6px;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.checkbox-container {
+    height: 12px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.whatsapp {
+    font-size: 15px;
+    width: 0;
+    white-space: nowrap;
+    padding-left: 10px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    gap: 290px;
+}
+
+.next{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #0e2a34;
+    color: #f4f4f4;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.next:hover {
+    background-color: #1c5266;
+    color: #f4f4f4;
+}
+
+#submitForm {
+    display: none;
+}
+
+.input-container-2 {
+    align-items: center;
+    display: inline-block;
+    flex-direction: column;
+    margin-left: 23px;
+    width: 25%;
+    height: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+.input-desc {
+    display: flex;
+    flex-direction: column;
+    margin-left: 23px;
+    font-size: 17px;
+}
+
+textarea {
+    resize: none;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 87%;
+    height: 90px;
+    border-radius: 10px;
+    padding: 7px;
+    font-size: 17px;
+}
+
+.input-photo {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 86%;
+    height: 100px;
+    gap: 20px;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+input[type=file] { 
+    border: none;
+    color: #001F3F;
+ }
+
+.button-photo {
+    cursor: pointer;
+    width: 125px;
+    height: 35px;
+    margin-left: 23px;
+    font-size: 15px;
+    color: #f4f4f4;
+    background-color: #0e2a34;
+    border-radius: 10px;
+}
+
+.back {
+    width: 60px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #a00000;
+    color: #f3f3f3; 
+    font-size: 15px; 
+    cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+    .logo, img, #view_photo{
+        display: none;
+    }
+
+    .form-container {
+        max-width: 580px;
+    }
+
+    .input-photo {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .footer {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .form-container {
+        max-width: 460px;
+    }
+
+    .info-step-1, .info-step-2, .info-step-3 {
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .s1, .s2, .s3 {
+        font-size: 14px;
+        width: 120px;
+        height: 45px;
+    }
+
+    .input-container-2 {
+        font-size: 14px;
+    }
+
+    textarea {
+        width: 92%;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 460px) { 
+    .form-container {
+        max-width: 360px;
+    }
+
+    .info-step-1, .info-step-2, .info-step-3 {
+        gap: 5px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .s1, .s2, .s3 {
+        font-size: 14px;
+        width: 90px;
+        height: 45px;
+    }
+
+     .input-container-2 {
+        font-size: 14px;
+    }
+
+    #km {
+        visibility: hidden;
+        position: relative;
+    }
+
+    #km::after {
+        content: "Km";
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    textarea {
+        width: 92%;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .form-container {
+        max-width: 300px;
+    }
+
+    .info-step-1, .info-step-2, .info-step-3 {
+        gap: 5px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .s1, .s2, .s3 {
+        font-size: 14px;
+        width: 70px;
+        height: 45px;
+    }
+
+    .s2 {
+        visibility: hidden;
+        position: relative;
+    }
+
+    .s2::after {
+        content: "Info. Veículo";
+        visibility: visible;
+        position: absolute;
+        border: 1px solid #ccc ;
+        color: #ccc;
+        border-radius: 10px;
+        width: 70px;
+        height: 45px;
+    }
+
+     .input-container-2 {
+        font-size: 14px;
+    }
+
+    #km {
+        visibility: hidden;
+        position: relative;
+    }
+
+    #km::after {
+        content: "Km";
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    textarea {
+        width: 92%;
+        font-size: 14px;
+    }
+
+}
+#formulario {
+    /* display: none; */
+}

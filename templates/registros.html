@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Carros</title>
+</head>
+<body style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <h1>Lista de Carros Registrados</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome do Vendedor</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>CPF</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Carroceria</th>
+                <th>Câmbio</th>
+                <th>Ano</th>
+                <th>KM</th>
+                <th>Foto</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registro in registros %}
+            <tr>
+                <td>{{ registro[0] }}</td>
+                <td>{{ registro[1] }}</td>
+                <td>{{ registro[2] }}</td>
+                <td>{{ registro[3] }}</td>
+                <td>{{ registro[4] }}</td>
+                <td>{{ registro[5] }}</td>
+                <td>{{ registro[6] }}</td>
+                <td>{{ registro[7] }}</td>
+                <td>{{ registro[8] }}</td>
+                <td>{{ registro[9] }}</td>
+                <td>{{ registro[10] }}</td>
+                <td>
+                    {% if registro[11] %}
+                        <img src="/{{ registro[11] }}" alt="Foto do carro" width="100">
+                    {% else %}
+                        Sem foto
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
