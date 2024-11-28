@@ -8,12 +8,17 @@ Esse projeto tem como finalidade representar uma agência de revenda de carros, 
 - HTML, CSS, JS
 
 ## Inicialização
-1 - Primeiramente é necessário fazer a criação da tabela pre-criada no banco de dados *database.db*.
+1 - Para baixar as dependencias é nesessário ter o python e pip instalado, e faça a instalação das dependências em requirements.txt
+```cmd
+pip install -r requirements
+```
+
+2 - Após isso é necessário fazer a criação da tabela pre-criada no banco de dados *database.db*.
 ```cmd
 python db.py
 ```
 
-2 - E para startar o servidor 
+3 - E para startar o servidor: 
 ```powershell
 python app.py
 ```
