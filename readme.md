@@ -10,7 +10,7 @@ Esse projeto tem como finalidade representar uma agência de revenda de carros, 
 ## Inicialização
 1 - Para baixar as dependencias é nesessário ter o python e pip instalado, e faça a instalação das dependências em requirements.txt
 ```cmd
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 2 - Após isso é necessário fazer a criação da tabela pre-criada no banco de dados *database.db*.
