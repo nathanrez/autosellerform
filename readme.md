@@ -26,8 +26,8 @@ No console aparecerá a url referente ao servidor local, normalmente exposto na 
 
 ## Rotas
 
-- **('/')** : Nesse seu caminho será redenderizado o formulário de incrição do usuário e carro.
+- **('/')** GET : Nesse seu caminho será redenderizado o formulário de incrição do usuário e carro.
 
-- **('/cadastro')** : Nesse caminho é onde será feito a requisição POST dos dados submetidos do front-end para o banco de dados.
+- **('/cadastro')** POST : Nesse caminho é onde será feito a requisição POST dos dados submetidos do front-end para o banco de dados.
 
-- **('/registros')** : Nesse caminho é renderizado a tabela de registros feitos por meio do metodo GET, para a análise dos consultores. 
+- **('/registros')** GET : Nesse caminho é renderizado a tabela de registros feitos por meio do metodo GET, para a análise dos consultores. 
